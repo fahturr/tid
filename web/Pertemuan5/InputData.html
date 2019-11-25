@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Input Data Mahasiswa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Formulir Data Mahasiswa</h1>
+        <form action="../OlahInputData" method="GET">
+            <table>
+                <tr>
+                    <td>Nama Mahasiswa</td>
+                    <td><input type="text" name="nama"/></td>
+                </tr>
+                <tr>
+                    <td>NIM</td>
+                    <td><input type="text" name="nim"/></td>
+                </tr>
+                <tr>
+                    <td>Program Studi</td>
+                    <td>
+                        <select name="prodi">
+                            <option value="TI">Teknik Informatika </option>
+                            <option value="SI" />Sistem Informasi</option>
+                            <option value="TK" />Teknik Komputer</option>
+                            <option value="TM" />Teknik Mekatronika</option>
+                            <option value="TET" />Teknik Elektronika Telekomunikasi</option>
+                            <option value="MS" />Teknik Mesin</option>
+                            <option value="TE" />Teknik Elektronika</option>
+                            <option value="TL" />Teknik Listrik</option>
+                            <option value="LK" />Teknik Telekomunikasi</option>
+                            <option value="AKT" />Akuntansi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bahasa Pemrograman</td>
+                    <td>
+                        <input type="checkbox" name="bahasa1" >PHP<br>
+                        <input type="checkbox" name="bahasa2" >JSP<br>
+                        <input type="checkbox" name="bahasa3" >Go<br>
+                        <input type="checkbox" name="bahasa4" >Javascript<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Database yang dikuasai:</td>
+                    <td>
+                        <input type="checkbox" name="db" value="MySQL" />MySQL<br>
+                        <input type="checkbox" name="db" value="JavaDB" />JavaDB<br>
+                        <input type="checkbox" name="db" value="MongoDB" />MongoDB<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>
+                        <input type="radio" name="jk" value="Pria" />Pria
+                        <input type="radio" name="jk" value="Wanita" />Wanita
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Kirim"/></td>
+                    <td><input type="reset" value="Batal"/></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
