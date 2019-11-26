@@ -23,19 +23,13 @@ public class AksesJdbcOdbc {
     private ResultSet rs;
     private PreparedStatement ps;
 
-    private String dsn;
-    private String login;
-    private String pwd;
-
-    public AksesJdbcOdbc(String dsn, String login, String pwd) {
-        this.dsn = dsn;
-        this.login = login;
-        this.pwd = pwd;
-    }
+    private final String dsn = "jdbc:mysql://localhost:3306/pegawai";
+    private final String login = "root";
+    private final String pwd = "";
 
     public Connection connect() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/fahtur");
+        conn = DriverManager.getConnection(dsn, login, pwd);
         stmt = conn.createStatement();
         return conn;
     }
