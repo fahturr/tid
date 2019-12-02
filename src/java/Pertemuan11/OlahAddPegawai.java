@@ -44,7 +44,8 @@ public class OlahAddPegawai extends HttpServlet {
             dispatcher = request.getRequestDispatcher("PT_PCR/sukses.jsp");
             dispatcher.forward(request, response);
         } else {
-
+            dispatcher = request.getRequestDispatcher("PT_PCR/gagal.jsp");
+            dispatcher.forward(request, response);
         }
     }
 }
