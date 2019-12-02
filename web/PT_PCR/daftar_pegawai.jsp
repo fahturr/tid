@@ -1,9 +1,3 @@
-<%-- 
-    Document   : daftar_pegawai
-    Created on : Nov 26, 2019, 12:29:45 AM
-    Author     : fatur
---%>
-
 <%@page import="pt_pcr.PegawaiHome"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="pt_pcr.Pegawai"%>
@@ -25,6 +19,7 @@
                 <td>Nama Pegawai</td>
                 <td>Alamat</td>
                 <td>Jabatan</td>
+                <td>Aksi</td>
             </tr>
             <%
                 for (int i = 0; i < list.size(); i++) {
@@ -35,6 +30,11 @@
                 <td><%= list.get(i).getNamaPegawai()%></td>
                 <td><%= list.get(i).getAlamat()%></td>
                 <td><%= list.get(i).getJabatan()%></td>
+                <td>
+                    <a href="formEditPegawai.jsp?nip=<%= list.get(i).getNip()%>" >Edit</a> 
+                    |
+                    <a href="../OlahHapusPegawai?nip=<%= list.get(i).getNip()%>" >Hapus</a>
+                </td>
             </tr>
             <%
                 }
